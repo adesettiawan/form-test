@@ -16,7 +16,7 @@ return new class extends Migration
     {
         Schema::create('members', function (Blueprint $table) {
             $table->id();
-            $table->integer('telp')->notNull();
+            $table->string('telp')->notNull();
             $table->string('nama')->notNull();
             $table->text('alamat')->notNull();
             $table->string('agama')->notNull();

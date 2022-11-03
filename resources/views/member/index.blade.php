@@ -53,13 +53,14 @@
                     <div class="form-group row">
                         <label for="telp" class="col-sm-2 col-form-label">Handphone</label>
                         <div class="col-sm-10">
-                            <input type="number" name="telp" class="form-control" id="telp">
+                            <input type="number" name="telp" class="form-control"
+                                placeholder="ketikan nomor handphone..." id="telp">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="nama" class="col-sm-2 col-form-label">Nama</label>
                         <div class="col-sm-10">
-                            <input type="text" name="nama" class="form-control" id="nama">
+                            <input type="text" name="nama" class="form-control" placeholder="ketikan nama..." id="nama">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -159,7 +160,7 @@
                     <div class="form-group row">
                         <label for="tahun" class="mr-2 ml-3">Tahun Lahir</label>
                         <div class="col-sm-4">
-                            <select id="tahun" name="tahun_lahir" class="form-control">
+                            <select id="datepicker" name="tahun_lahir" class="form-control">
                                 <option value="">Pilih...</option>
                                 <option value="2003">2003</option>
                                 <option value="2002">2002</option>
@@ -176,7 +177,8 @@
                         </div>
                         <label for="umur">Umur</label>
                         <div class="col-sm-4">
-                            <input type="number" name="umur" class="form-control" id="umur">
+                            <input type="number" name="umur" placeholder="umur..." readonly class="form-control"
+                                id="umur">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -197,6 +199,24 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script>
+        $(function() {
+                $( "#datepicker" ).datepicker();
+            });
+     
+            window.onload=function(){
+                $('#datepicker').on('change', function() {
+                    var dob = new Date(this.value);
+                    var today = new Date();
+                    var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
+                    $('#umur').val(age);
+                });
+            }
+     
     </script>
 
 </body>
