@@ -68,7 +68,7 @@
             </tbody>
         </table>
 
-        <a href="{{url('/')}}" class="btn btn-primary ml-3 mt-5">Kembali</a>
+        <a href="{{url('/')}}" class="btn btn-primary mt-5">Kembali</a>
     </div>
 
 

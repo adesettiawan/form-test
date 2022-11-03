@@ -158,7 +158,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="tahun" class="mr-2 ml-3">Tahun Lahir</label>
+                        <label for="tahun" class="mr-4 ml-3">Tahun Lahir</label>
                         <div class="col-sm-4">
                             <select id="datepicker" name="tahun_lahir" class="form-control">
                                 <option value="">Pilih...</option>
